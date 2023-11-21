@@ -16,14 +16,14 @@ def update_data(filename,data,timestamp):
         with open(filename,'r',encoding='utf-8') as f:
             data_dict = json.load(f)
 
-        data_dict.update({timestamp:data})
+        data_dict.update(payload)
 
         with open(filename,'w',encoding='utf-8') as f:
             json.dump(data_dict,f)
 
     else:
         with open(filename,'w',encoding='utf-8') as f:
-            json.dump({timestamp:data},f)
+            json.dump(payload,f)
 
 def main():
     manager = SpotifyClientCredentials(
