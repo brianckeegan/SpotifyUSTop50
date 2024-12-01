@@ -2,8 +2,6 @@ name: Scraping Spotify Top 50
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '13 13 * * *'
 
 permissions:
   contents: write 
